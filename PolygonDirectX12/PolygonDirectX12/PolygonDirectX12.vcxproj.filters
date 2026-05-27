@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="window">
+      <UniqueIdentifier>{b968e195-69f9-4adc-819f-fa005ac4193e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DirectX12">
+      <UniqueIdentifier>{ee2254b8-c046-4e6a-aff6-bd3f1983ee2b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\main.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\window\window.cpp">
+      <Filter>window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Application.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DirectX12\Device.cpp">
+      <Filter>DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Renderer.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DirectX12\Command.cpp">
+      <Filter>DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DirectX12\DescriptorHeap.cpp">
+      <Filter>DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DirectX12\SwapChain.cpp">
+      <Filter>DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DirectX12\RenderTarget.cpp">
+      <Filter>DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DirectX12\Fence.cpp">
+      <Filter>DirectX12</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\window\window.h">
+      <Filter>window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Application.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DirectX12\Device.h">
+      <Filter>DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Renderer.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DirectX12\Command.h">
+      <Filter>DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DirectX12\DescriptorHeap.h">
+      <Filter>DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DirectX12\RenderTarget.h">
+      <Filter>DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DirectX12\SwapChain.h">
+      <Filter>DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DirectX12\Fence.h">
+      <Filter>DirectX12</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

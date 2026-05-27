@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="PolygonDirectX12/PolygonDirectX12.vcxproj" Id="07055128-0969-4e76-8500-f8608f129fd8" />
+</Solution>
