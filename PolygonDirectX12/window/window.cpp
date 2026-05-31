@@ -48,7 +48,7 @@ namespace {
         0,
         CLASS_NAME,
         L"",
-        WS_POPUP,
+        WS_OVERLAPPED,
         CW_USEDEFAULT, CW_USEDEFAULT,
         width, height,
         NULL,

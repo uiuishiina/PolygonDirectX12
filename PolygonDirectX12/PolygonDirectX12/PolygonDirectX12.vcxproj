@@ -157,6 +157,7 @@
     <ClInclude Include="..\DirectX12\DescriptorHeap.h" />
     <ClInclude Include="..\DirectX12\Device.h" />
     <ClInclude Include="..\DirectX12\Fence.h" />
+    <ClInclude Include="..\DirectX12\PolygonBase.h" />
     <ClInclude Include="..\DirectX12\RenderTarget.h" />
     <ClInclude Include="..\DirectX12\SwapChain.h" />
     <ClInclude Include="..\Renderer.h" />

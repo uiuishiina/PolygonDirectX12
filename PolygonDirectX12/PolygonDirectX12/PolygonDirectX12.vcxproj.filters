@@ -80,5 +80,8 @@
     <ClInclude Include="..\DirectX12\Fence.h">
       <Filter>DirectX12</Filter>
     </ClInclude>
+    <ClInclude Include="..\DirectX12\PolygonBase.h">
+      <Filter>DirectX12</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

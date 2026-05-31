@@ -1,10 +1,10 @@
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\Application.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\Application.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\DirectX12\Command.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\Command.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\DirectX12\DescriptorHeap.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\DescriptorHeap.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\DirectX12\Device.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\Device.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\DirectX12\Fence.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\Fence.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\DirectX12\RenderTarget.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\RenderTarget.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\DirectX12\SwapChain.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\SwapChain.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\main.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\main.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\Renderer.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\Renderer.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\window\window.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\window.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\Application.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\Application.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\DirectX12\Command.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\Command.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\DirectX12\DescriptorHeap.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\DescriptorHeap.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\DirectX12\Device.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\Device.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\DirectX12\Fence.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\Fence.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\DirectX12\RenderTarget.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\RenderTarget.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\DirectX12\SwapChain.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\SwapChain.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\main.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\main.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\Renderer.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\Renderer.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\window\window.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\window.obj
