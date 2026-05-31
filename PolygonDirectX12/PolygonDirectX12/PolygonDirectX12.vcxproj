@@ -140,6 +140,13 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\addfiles\imgui\backends\imgui_impl_dx12.cpp" />
+    <ClCompile Include="..\addfiles\imgui\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="..\addfiles\imgui\imgui.cpp" />
+    <ClCompile Include="..\addfiles\imgui\imgui_demo.cpp" />
+    <ClCompile Include="..\addfiles\imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\addfiles\imgui\imgui_tables.cpp" />
+    <ClCompile Include="..\addfiles\imgui\imgui_widgets.cpp" />
     <ClCompile Include="..\Application.cpp" />
     <ClCompile Include="..\DirectX12\Command.cpp" />
     <ClCompile Include="..\DirectX12\ColorBuffer.cpp" />
@@ -152,11 +159,21 @@
     <ClCompile Include="..\DirectX12\RootSignature.cpp" />
     <ClCompile Include="..\DirectX12\ShaderCompiler.cpp" />
     <ClCompile Include="..\DirectX12\SwapChain.cpp" />
+    <ClCompile Include="..\IMGUI\ColorEditer.cpp" />
+    <ClCompile Include="..\IMGUI\ImguiManager.cpp" />
     <ClCompile Include="..\main.cpp" />
     <ClCompile Include="..\Renderer.cpp" />
     <ClCompile Include="..\window\window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\addfiles\imgui\backends\imgui_impl_dx12.h" />
+    <ClInclude Include="..\addfiles\imgui\backends\imgui_impl_win32.h" />
+    <ClInclude Include="..\addfiles\imgui\imconfig.h" />
+    <ClInclude Include="..\addfiles\imgui\imgui.h" />
+    <ClInclude Include="..\addfiles\imgui\imgui_internal.h" />
+    <ClInclude Include="..\addfiles\imgui\imstb_rectpack.h" />
+    <ClInclude Include="..\addfiles\imgui\imstb_textedit.h" />
+    <ClInclude Include="..\addfiles\imgui\imstb_truetype.h" />
     <ClInclude Include="..\Application.h" />
     <ClInclude Include="..\DirectX12\Command.h" />
     <ClInclude Include="..\DirectX12\ColorBuffer.h" />
@@ -169,6 +186,8 @@
     <ClInclude Include="..\DirectX12\RootSignature.h" />
     <ClInclude Include="..\DirectX12\ShaderCompiler.h" />
     <ClInclude Include="..\DirectX12\SwapChain.h" />
+    <ClInclude Include="..\IMGUI\ColorEditer.h" />
+    <ClInclude Include="..\IMGUI\ImguiManager.h" />
     <ClInclude Include="..\Renderer.h" />
     <ClInclude Include="..\window\window.h" />
   </ItemGroup>

@@ -22,6 +22,18 @@
     <Filter Include="DirectX12\Shader">
       <UniqueIdentifier>{9978a8b8-0ef5-4188-b638-380fca8678b6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="IMGUI">
+      <UniqueIdentifier>{7d209757-bbcc-495c-b777-7ab843d8fa2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addfiles">
+      <UniqueIdentifier>{38b8289e-1f1f-4f2d-a56e-8fb7047eebcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addfiles\imgui">
+      <UniqueIdentifier>{c770afac-135d-4191-bdaa-a30622cabd41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addfiles\imgui\backend">
+      <UniqueIdentifier>{8c09b9e1-3dba-42da-8244-e862e33e86ae}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\main.cpp">
@@ -69,6 +81,33 @@
     <ClCompile Include="..\DirectX12\ColorBuffer.cpp">
       <Filter>DirectX12</Filter>
     </ClCompile>
+    <ClCompile Include="..\IMGUI\ImguiManager.cpp">
+      <Filter>IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addfiles\imgui\imgui.cpp">
+      <Filter>addfiles\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addfiles\imgui\imgui_demo.cpp">
+      <Filter>addfiles\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addfiles\imgui\imgui_draw.cpp">
+      <Filter>addfiles\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addfiles\imgui\imgui_tables.cpp">
+      <Filter>addfiles\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addfiles\imgui\imgui_widgets.cpp">
+      <Filter>addfiles\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addfiles\imgui\backends\imgui_impl_dx12.cpp">
+      <Filter>addfiles\imgui\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addfiles\imgui\backends\imgui_impl_win32.cpp">
+      <Filter>addfiles\imgui\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="..\IMGUI\ColorEditer.cpp">
+      <Filter>IMGUI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\window\window.h">
@@ -112,6 +151,36 @@
     </ClInclude>
     <ClInclude Include="..\DirectX12\ColorBuffer.h">
       <Filter>DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="..\IMGUI\ImguiManager.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addfiles\imgui\imconfig.h">
+      <Filter>addfiles\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addfiles\imgui\imgui.h">
+      <Filter>addfiles\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addfiles\imgui\imgui_internal.h">
+      <Filter>addfiles\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addfiles\imgui\imstb_rectpack.h">
+      <Filter>addfiles\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addfiles\imgui\imstb_textedit.h">
+      <Filter>addfiles\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addfiles\imgui\imstb_truetype.h">
+      <Filter>addfiles\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addfiles\imgui\backends\imgui_impl_dx12.h">
+      <Filter>addfiles\imgui\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addfiles\imgui\backends\imgui_impl_win32.h">
+      <Filter>addfiles\imgui\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="..\IMGUI\ColorEditer.h">
+      <Filter>IMGUI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

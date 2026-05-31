@@ -13,7 +13,7 @@ struct colorDate {
 class ColorBuffer final
 {
 public:
-    [[nodiscard]] bool create_constant_Buffer(const colorDate& date, D3D12_CPU_DESCRIPTOR_HANDLE handle);
+    [[nodiscard]] bool create_color_buffer(const colorDate& date, D3D12_CPU_DESCRIPTOR_HANDLE handle);
 
     [[nodiscard]] ID3D12Resource* get_buffer()const noexcept;
 

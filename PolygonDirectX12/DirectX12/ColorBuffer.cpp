@@ -1,6 +1,6 @@
 #include"ColorBuffer.h"
 
-[[nodiscard]] bool ColorBuffer::create_constant_Buffer(const colorDate& date, D3D12_CPU_DESCRIPTOR_HANDLE handle) {
+[[nodiscard]] bool ColorBuffer::create_color_buffer(const colorDate& date, D3D12_CPU_DESCRIPTOR_HANDLE handle) {
 
     if (date.color_date.empty()) {
         return false;

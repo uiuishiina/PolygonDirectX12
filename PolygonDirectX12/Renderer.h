@@ -19,6 +19,7 @@ class PiplineState;
 class ShaderCompiler;
 class ColorBuffer;
 
+struct colorDate;
 //----------------------------------------------------------------------------------------------------
 
 class Renderer final
@@ -39,9 +40,11 @@ public:
 private:
 	//----------------------------------------------------------------------------------------------------
 
-	float color_B = 1;
+	HWND hwnd_{};
 	const int frame_buffer_size = 2;
 	std::vector<UINT64>    frame_fence_value{};
+
+	std::unique_ptr<colorDate> color_date{};
 
 	std::unique_ptr<GraphicsCommand> graphics_command{};
 	std::unique_ptr<SwapChain> swap_chain{};

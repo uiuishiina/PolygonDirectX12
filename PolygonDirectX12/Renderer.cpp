@@ -12,6 +12,9 @@
 #include"DirectX12/PiplineState.h"
 #include"DirectX12/ColorBuffer.h"
 
+#include"IMGUI/ImguiManager.h"
+#include"IMGUI/ColorEditer.h"
+
 #include"Renderer.h"
 
 //----------------------------------------------------------------------------------------------------
@@ -49,6 +52,8 @@ Renderer::~Renderer() = default;
 
 [[nodiscard]] bool Renderer::initialize_renderer(HWND hwnd) {
 
+    hwnd_ = hwnd;
+
     //Device DXGI作成
     Check_Failed(Device::Instance().initialize_Device());
 
@@ -58,7 +63,7 @@ Renderer::~Renderer() = default;
 
     //SwapChain作成
     swap_chain = std::make_unique<SwapChain>();
-    Check_Failed(swap_chain->create_swapchain(graphics_command->get_queue(), hwnd, 1280, 720, frame_buffer_size));
+    Check_Failed(swap_chain->create_swapchain(graphics_command->get_queue(), hwnd_, 1280, 720, frame_buffer_size));
 
     //RenderTarget作成
     render_target = std::make_unique<RenderTarget>();
@@ -93,21 +98,32 @@ Renderer::~Renderer() = default;
     }
 
     color_ = std::make_unique<ColorBuffer>();
-    colorDate color_date{};
-    color_date.color_date = {
+
+    color_date = std::make_unique<colorDate>();
+    color_date->color_date = {
         color(1,0,0,1),
         color(0,1,0,1),
         color(0,0,1,1)
     };
-    Check_Failed(color_->create_constant_Buffer(color_date, heap_->get_CPU_handle(0)));
+    Check_Failed(color_->create_color_buffer(*color_date, heap_->get_CPU_handle(0)));
 
-    color_->map(color_date);
+    color_->map(*color_date);
 
     root_ = std::make_unique<RootSignature>();
     Check_Failed(root_->create_root_signature());
 
     pipline_ = std::make_unique<PiplineState>();
     Check_Failed(pipline_->create_pipline_state(root_->get_root_signature(), vs_shader_->get_shader_blob(), ps_shader_->get_shader_blob()));
+
+
+    //===========================================================================
+    //IMGUI作成 
+     
+    ImGuiManager::Instance().initialize(hwnd_, Device::Instance().get_device(),
+        graphics_command->get_queue(), frame_buffer_size, DXGI_FORMAT_R8G8B8A8_UNORM);
+    
+    //===========================================================================
+
 
 	return true;
 }
@@ -117,6 +133,20 @@ Renderer::~Renderer() = default;
 void Renderer::update_renderer() {
 
     const auto back_buffer_index = swap_chain->get_swapchain()->GetCurrentBackBufferIndex();
+
+    ImGuiManager::Instance().new_frame();
+#if defined(_DEBUG)
+    ColorEditor::draw(*color_date);
+
+    ImGuiIO& io = ImGui::GetIO();
+    RECT rc;
+    GetClientRect(hwnd_, &rc);
+
+    io.DisplaySize = ImVec2(
+        (float)(rc.right - rc.left),
+        (float)(rc.bottom - rc.top)
+    );
+#endif
 
     if (frame_fence_value[back_buffer_index] != 0) {
         fence_->wait_event(frame_fence_value[back_buffer_index]);
@@ -157,16 +187,8 @@ void Renderer::update_renderer() {
 
     graphics_command->get_list()->SetPipelineState(pipline_->get_pipline_state());
     graphics_command->get_list()->SetGraphicsRootSignature(root_->get_root_signature());
-    
-    color_B -= 0.01f;
 
-    colorDate color_date{};
-    color_date.color_date = {
-        color(color_B,0,0,1),
-        color(0,color_B,0,1),
-        color(0,0,color_B,1)
-    };
-    color_->map(color_date);
+    color_->map(*color_date);
 
     ID3D12DescriptorHeap* heap[] = { heap_->get_heap() };
     graphics_command->get_list()->SetDescriptorHeaps(1, heap);
@@ -175,6 +197,17 @@ void Renderer::update_renderer() {
     polygon_->draw_polygon(graphics_command->get_list());
 
     //--------------------------------------------------------------------------------------------------
+
+    //===========================================================================
+
+    // ImGui の描画先レンダーターゲットを設定
+    D3D12_CPU_DESCRIPTOR_HANDLE rtHandle = render_target->get_rtv_handle(back_buffer_index);
+    graphics_command->get_list()->OMSetRenderTargets(1, &rtHandle, false, nullptr);
+
+    // ImGui の描画コマンドを積む（内部でヒープ切り替えも行う）
+    ImGuiManager::Instance().render(graphics_command->get_list());
+
+    //===========================================================================
 
     auto rtToP = resource_Barrier(render_target->get_render_target(back_buffer_index), D3D12_RESOURCE_STATE_RENDER_TARGET, D3D12_RESOURCE_STATE_PRESENT);
     graphics_command->get_list()->ResourceBarrier(1, &rtToP);
@@ -194,4 +227,5 @@ void Renderer::end_renderer() {
     for (auto& p : frame_fence_value) {
         fence_->wait_event(p);
     }
+    ImGuiManager::Instance().shutdown();
 }

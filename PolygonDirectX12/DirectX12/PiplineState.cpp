@@ -16,7 +16,24 @@
     desc.PS = { psshader->GetBufferPointer(),psshader->GetBufferSize() };
     desc.RasterizerState = CD3DX12_RASTERIZER_DESC(D3D12_DEFAULT);
     desc.RasterizerState.CullMode = D3D12_CULL_MODE_BACK;
-    desc.BlendState = CD3DX12_BLEND_DESC(D3D12_DEFAULT);
+
+    CD3DX12_BLEND_DESC blendDesc(D3D12_DEFAULT);
+    auto& rt = blendDesc.RenderTarget[0];
+    rt.BlendEnable = TRUE;
+    rt.LogicOpEnable = FALSE;
+
+    rt.SrcBlend = D3D12_BLEND_SRC_ALPHA;
+    rt.DestBlend = D3D12_BLEND_INV_SRC_ALPHA;
+    rt.BlendOp = D3D12_BLEND_OP_ADD;
+
+    rt.SrcBlendAlpha = D3D12_BLEND_ONE;
+    rt.DestBlendAlpha = D3D12_BLEND_ZERO;
+    rt.BlendOpAlpha = D3D12_BLEND_OP_ADD;
+
+    rt.RenderTargetWriteMask = D3D12_COLOR_WRITE_ENABLE_ALL;
+    desc.BlendState = blendDesc;
+
+
     desc.DepthStencilState = CD3DX12_DEPTH_STENCIL_DESC(D3D12_DEFAULT);
 
     desc.DepthStencilState.DepthEnable = FALSE;
