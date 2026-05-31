@@ -19,6 +19,9 @@
     <Filter Include="DirectX12">
       <UniqueIdentifier>{ee2254b8-c046-4e6a-aff6-bd3f1983ee2b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DirectX12\Shader">
+      <UniqueIdentifier>{9978a8b8-0ef5-4188-b638-380fca8678b6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\main.cpp">
@@ -51,6 +54,21 @@
     <ClCompile Include="..\DirectX12\Fence.cpp">
       <Filter>DirectX12</Filter>
     </ClCompile>
+    <ClCompile Include="..\DirectX12\PolygonBase.cpp">
+      <Filter>DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DirectX12\RootSignature.cpp">
+      <Filter>DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DirectX12\PiplineState.cpp">
+      <Filter>DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DirectX12\ShaderCompiler.cpp">
+      <Filter>DirectX12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DirectX12\ColorBuffer.cpp">
+      <Filter>DirectX12</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\window\window.h">
@@ -81,6 +99,18 @@
       <Filter>DirectX12</Filter>
     </ClInclude>
     <ClInclude Include="..\DirectX12\PolygonBase.h">
+      <Filter>DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DirectX12\RootSignature.h">
+      <Filter>DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DirectX12\PiplineState.h">
+      <Filter>DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DirectX12\ShaderCompiler.h">
+      <Filter>DirectX12</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DirectX12\ColorBuffer.h">
       <Filter>DirectX12</Filter>
     </ClInclude>
   </ItemGroup>

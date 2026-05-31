@@ -12,6 +12,13 @@ class SwapChain;
 class RenderTarget;
 class Fence;
 
+class DescriptorHeap;
+class PolygonBase;
+class RootSignature;
+class PiplineState;
+class ShaderCompiler;
+class ColorBuffer;
+
 //----------------------------------------------------------------------------------------------------
 
 class Renderer final
@@ -26,10 +33,13 @@ public:
 
 	void update_renderer();
 
+	void end_renderer();
+
 	//----------------------------------------------------------------------------------------------------
 private:
 	//----------------------------------------------------------------------------------------------------
 
+	float color_B = 1;
 	const int frame_buffer_size = 2;
 	std::vector<UINT64>    frame_fence_value{};
 
@@ -37,6 +47,16 @@ private:
 	std::unique_ptr<SwapChain> swap_chain{};
 	std::unique_ptr<RenderTarget> render_target{};
 	std::unique_ptr<Fence> fence_{};
+
+	std::unique_ptr<ShaderCompiler> vs_shader_{};
+	std::unique_ptr<ShaderCompiler> ps_shader_{};
+
+	std::unique_ptr<DescriptorHeap> heap_{};
+
+	std::unique_ptr<PolygonBase> polygon_{};
+	std::unique_ptr<ColorBuffer> color_{};
+	std::unique_ptr<RootSignature> root_{};
+	std::unique_ptr<PiplineState> pipline_{};
 
 	//----------------------------------------------------------------------------------------------------
 };

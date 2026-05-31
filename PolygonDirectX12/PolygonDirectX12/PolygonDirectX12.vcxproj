@@ -142,10 +142,15 @@
   <ItemGroup>
     <ClCompile Include="..\Application.cpp" />
     <ClCompile Include="..\DirectX12\Command.cpp" />
+    <ClCompile Include="..\DirectX12\ColorBuffer.cpp" />
     <ClCompile Include="..\DirectX12\DescriptorHeap.cpp" />
     <ClCompile Include="..\DirectX12\Device.cpp" />
     <ClCompile Include="..\DirectX12\Fence.cpp" />
+    <ClCompile Include="..\DirectX12\PiplineState.cpp" />
+    <ClCompile Include="..\DirectX12\PolygonBase.cpp" />
     <ClCompile Include="..\DirectX12\RenderTarget.cpp" />
+    <ClCompile Include="..\DirectX12\RootSignature.cpp" />
+    <ClCompile Include="..\DirectX12\ShaderCompiler.cpp" />
     <ClCompile Include="..\DirectX12\SwapChain.cpp" />
     <ClCompile Include="..\main.cpp" />
     <ClCompile Include="..\Renderer.cpp" />
@@ -154,11 +159,15 @@
   <ItemGroup>
     <ClInclude Include="..\Application.h" />
     <ClInclude Include="..\DirectX12\Command.h" />
+    <ClInclude Include="..\DirectX12\ColorBuffer.h" />
     <ClInclude Include="..\DirectX12\DescriptorHeap.h" />
     <ClInclude Include="..\DirectX12\Device.h" />
     <ClInclude Include="..\DirectX12\Fence.h" />
+    <ClInclude Include="..\DirectX12\PiplineState.h" />
     <ClInclude Include="..\DirectX12\PolygonBase.h" />
     <ClInclude Include="..\DirectX12\RenderTarget.h" />
+    <ClInclude Include="..\DirectX12\RootSignature.h" />
+    <ClInclude Include="..\DirectX12\ShaderCompiler.h" />
     <ClInclude Include="..\DirectX12\SwapChain.h" />
     <ClInclude Include="..\Renderer.h" />
     <ClInclude Include="..\window\window.h" />

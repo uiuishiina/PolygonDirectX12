@@ -4,6 +4,14 @@
 #include"DirectX12/RenderTarget.h"
 #include"DirectX12/Fence.h"
 
+#include"DirectX12/DescriptorHeap.h"
+
+#include"DirectX12/ShaderCompiler.h"
+#include"DirectX12/PolygonBase.h"
+#include"DirectX12/RootSignature.h"
+#include"DirectX12/PiplineState.h"
+#include"DirectX12/ColorBuffer.h"
+
 #include"Renderer.h"
 
 //----------------------------------------------------------------------------------------------------
@@ -62,6 +70,45 @@ Renderer::~Renderer() = default;
 
     frame_fence_value.resize(frame_buffer_size,0);
 
+    vs_shader_ = std::make_unique<ShaderCompiler>();
+    ps_shader_ = std::make_unique<ShaderCompiler>();
+    Check_Failed(vs_shader_->compile_shader(L"../DirectX12/Shader/VertexShader.hlsl", "main", "vs_5_0"));
+    Check_Failed(ps_shader_->compile_shader(L"../DirectX12/Shader/PixelShader.hlsl", "main", "ps_5_0"));
+
+    polygon_ = std::make_unique<PolygonBase>();
+    VertexData vertex_date{};
+    vertex_date.vertex_vec = {
+        Vertex({0,0.5,0}),
+        Vertex({0.5,-0.5,0}),
+        Vertex({-0.5,-0.5,0})
+    }; 
+    vertex_date.index_vec = { 0,1,2 };
+
+    Check_Failed(polygon_->create_polygon(vertex_date));
+
+
+    heap_ = std::make_unique<DescriptorHeap>();
+    if (!heap_->create_heap(D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV, 1, true)) {
+        return false;
+    }
+
+    color_ = std::make_unique<ColorBuffer>();
+    colorDate color_date{};
+    color_date.color_date = {
+        color(1,0,0,1),
+        color(0,1,0,1),
+        color(0,0,1,1)
+    };
+    Check_Failed(color_->create_constant_Buffer(color_date, heap_->get_CPU_handle(0)));
+
+    color_->map(color_date);
+
+    root_ = std::make_unique<RootSignature>();
+    Check_Failed(root_->create_root_signature());
+
+    pipline_ = std::make_unique<PiplineState>();
+    Check_Failed(pipline_->create_pipline_state(root_->get_root_signature(), vs_shader_->get_shader_blob(), ps_shader_->get_shader_blob()));
+
 	return true;
 }
 
@@ -85,7 +132,7 @@ void Renderer::update_renderer() {
     D3D12_CPU_DESCRIPTOR_HANDLE handles[] = { render_target->get_rtv_handle(back_buffer_index) };
     graphics_command->get_list()->OMSetRenderTargets(1, handles, false, nullptr);
 
-    const float clearColor[] = { 1.0f, 0.0f, 0.0f, 1.0f };  // 黒でクリア
+    const float clearColor[] = { 0.0f, 0.0f, 0.0f, 1.0f };  // 黒でクリア
     graphics_command->get_list()->ClearRenderTargetView(handles[0], clearColor, 0, nullptr);
 
     // ビューポート設定
@@ -108,6 +155,25 @@ void Renderer::update_renderer() {
 
     //--------------------------------------------------------------------------------------------------
 
+    graphics_command->get_list()->SetPipelineState(pipline_->get_pipline_state());
+    graphics_command->get_list()->SetGraphicsRootSignature(root_->get_root_signature());
+    
+    color_B -= 0.01f;
+
+    colorDate color_date{};
+    color_date.color_date = {
+        color(color_B,0,0,1),
+        color(0,color_B,0,1),
+        color(0,0,color_B,1)
+    };
+    color_->map(color_date);
+
+    ID3D12DescriptorHeap* heap[] = { heap_->get_heap() };
+    graphics_command->get_list()->SetDescriptorHeaps(1, heap);
+    graphics_command->get_list()->SetGraphicsRootDescriptorTable(0, heap_->get_GPU_handle(0));
+
+    polygon_->draw_polygon(graphics_command->get_list());
+
     //--------------------------------------------------------------------------------------------------
 
     auto rtToP = resource_Barrier(render_target->get_render_target(back_buffer_index), D3D12_RESOURCE_STATE_RENDER_TARGET, D3D12_RESOURCE_STATE_PRESENT);
@@ -122,4 +188,10 @@ void Renderer::update_renderer() {
 
     const auto nextFenceValue = fence_->signal(graphics_command->get_queue());
     frame_fence_value[back_buffer_index] = nextFenceValue.value();
+};
+
+void Renderer::end_renderer() {
+    for (auto& p : frame_fence_value) {
+        fence_->wait_event(p);
+    }
 }
