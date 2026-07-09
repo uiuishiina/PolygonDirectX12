@@ -1,24 +1,24 @@
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\addfiles\imgui\backends\imgui_impl_dx12.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\imgui_impl_dx12.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\addfiles\imgui\backends\imgui_impl_win32.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\imgui_impl_win32.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\addfiles\imgui\imgui.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\imgui.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\addfiles\imgui\imgui_demo.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\imgui_demo.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\addfiles\imgui\imgui_draw.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\imgui_draw.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\addfiles\imgui\imgui_tables.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\imgui_tables.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\addfiles\imgui\imgui_widgets.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\imgui_widgets.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\Application.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\Application.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\DirectX12\Command.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\Command.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\DirectX12\ColorBuffer.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\ColorBuffer.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\DirectX12\DescriptorHeap.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\DescriptorHeap.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\DirectX12\Device.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\Device.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\DirectX12\Fence.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\Fence.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\DirectX12\PiplineState.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\PiplineState.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\DirectX12\PolygonBase.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\PolygonBase.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\DirectX12\RenderTarget.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\RenderTarget.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\DirectX12\RootSignature.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\RootSignature.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\DirectX12\ShaderCompiler.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\ShaderCompiler.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\DirectX12\SwapChain.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\SwapChain.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\IMGUI\ColorEditer.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\ColorEditer.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\IMGUI\ImguiManager.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\ImguiManager.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\main.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\main.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\Renderer.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\Renderer.obj
-B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\window\window.cpp;B:\Visual Studio\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\window.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\addfiles\imgui\backends\imgui_impl_dx12.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\imgui_impl_dx12.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\addfiles\imgui\backends\imgui_impl_win32.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\imgui_impl_win32.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\addfiles\imgui\imgui.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\imgui.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\addfiles\imgui\imgui_demo.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\imgui_demo.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\addfiles\imgui\imgui_draw.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\imgui_draw.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\addfiles\imgui\imgui_tables.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\imgui_tables.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\addfiles\imgui\imgui_widgets.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\imgui_widgets.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\Application.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\Application.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\DirectX12\Command.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\Command.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\DirectX12\ColorBuffer.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\ColorBuffer.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\DirectX12\DescriptorHeap.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\DescriptorHeap.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\DirectX12\Device.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\Device.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\DirectX12\Fence.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\Fence.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\DirectX12\PiplineState.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\PiplineState.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\DirectX12\PolygonBase.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\PolygonBase.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\DirectX12\RenderTarget.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\RenderTarget.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\DirectX12\RootSignature.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\RootSignature.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\DirectX12\ShaderCompiler.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\ShaderCompiler.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\DirectX12\SwapChain.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\SwapChain.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\IMGUI\ColorEditer.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\ColorEditer.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\IMGUI\ImguiManager.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\ImguiManager.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\main.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\main.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\Renderer.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\Renderer.obj
+C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\window\window.cpp;C:\Users\shiin\source\PolygonDirectX12\PolygonDirectX12\PolygonDirectX12\x64\Debug\window.obj
